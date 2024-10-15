@@ -7,7 +7,7 @@ export const getConnections = async () => {
 
   // Make a POST request to the backend
   const response = await fetch(
-    `${import.31.220.56.85}/friends/${id}`,
+    `http://31.220.56.85/friends/${id}`,
     {
       method: "GET",
       headers: {
@@ -32,9 +32,7 @@ export const removeConnection = async (connectionId) => {
 
   // Make a POST request to the backend
   const response = await fetch(
-    `${
-      import.31.220.56.85
-    }/friends/${id}/remove-friend/${connectionId}`,
+    `http://31.220.56.85/friends/${id}/remove-friend/${connectionId}`,
     {
       method: "DELETE",
       headers: {

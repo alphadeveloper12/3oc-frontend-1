@@ -7,7 +7,7 @@ const verifyUser = async (userDocument) => {
 
   // Make a POST request to the backend
   const response = await fetch(
-    `${import.31.220.56.85}/users/${id}/verification`,
+    `http://31.220.56.85/users/${id}/verification`,
     {
       method: "PUT",
       headers: {

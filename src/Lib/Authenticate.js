@@ -10,7 +10,7 @@ import { getUserPhone } from "./UserProfile";
 // ---------- LOG A USER IN ----------
 async function authenticateUser(userCredentials) {
   // Make a POST request to the backend
-  const response = await fetch(`${import.31.220.56.85}/users/login`, {
+  const response = await fetch(`http://31.220.56.85/users/login`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -46,7 +46,7 @@ async function googleLogin(accessToken) {
   const userInfo = await userInfoResponse.json();
 
   // Make a POST request to the backend with all details that we fetched
-  const response = await fetch(`${import.31.220.56.85}/auth/google`, {
+  const response = await fetch(`http://31.220.56.85/auth/google`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -73,7 +73,7 @@ async function googleLogin(accessToken) {
 async function registerUser(userData) {
   // Make a POST request to the backend
   const response = await fetch(
-    `${import.31.220.56.85}/users/register`,
+    `http://31.220.56.85/users/register`,
     {
       method: "POST",
       headers: {
@@ -104,7 +104,7 @@ async function verifyOTP(otp, isResend) {
 
   if (isResend) {
     // Make a POST request to the backend to resend the OTP
-    response = await fetch(`${import.31.220.56.85}/users/resend-otp`, {
+    response = await fetch(`http://31.220.56.85/users/resend-otp`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -116,7 +116,7 @@ async function verifyOTP(otp, isResend) {
     });
   } else {
     // Make a POST request to the backend
-    response = await fetch(`${import.31.220.56.85}/users/verify-otp`, {
+    response = await fetch(`http://31.220.56.85/users/verify-otp`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

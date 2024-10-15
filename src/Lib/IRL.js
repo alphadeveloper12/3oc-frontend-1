@@ -8,7 +8,7 @@ const scheduleIRL = async (IRLdata) => {
 
   // Make a POST request to the backend
   const response = await fetch(
-    `${import.31.220.56.85}/users/${id}/scheduleIRL`,
+    `http://31.220.56.85/users/${id}/scheduleIRL`,
     {
       method: "POST",
       headers: {
@@ -37,7 +37,7 @@ const updateIRL = async (irlId, irlData) => {
 
   // Make a POST request to the backend
   const response = await fetch(
-    `${import.31.220.56.85}/users/updateIRL/${irlId}`,
+    `http://31.220.56.85/users/updateIRL/${irlId}`,
     {
       method: "PUT",
       headers: {
@@ -65,7 +65,7 @@ const withdrawParticipant = async (irlId) => {
 
   // Make a POST request to the backend
   const response = await fetch(
-    `${import.31.220.56.85}/users/withdrawparticipant/${irlId}`,
+    `http://31.220.56.85/users/withdrawparticipant/${irlId}`,
     {
       method: "DELETE",
       headers: {
@@ -87,67 +87,13 @@ const withdrawParticipant = async (irlId) => {
   }
 };
 
-<<<<<<< Updated upstream
-=======
-const startIRL = async (irlId) => {
-  const token = getToken();
 
-  // Make a PUT request to the backend
-  const response = await fetch(
-    `${import.31.220.56.85}/users/startIRL/${irlId}`,
-    {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-        "ngrok-skip-browser-warning": `${import.meta.env.VITE_ISDEVELOPMENT}`,
-        Authorization: `Bearer ${token}`,
-      },
-    }
-  );
-
-  const data = await response.json();
-  console.log(data);
-
-  if (response.ok) {
-    return { success: true, message: data.message };
-  } else {
-    return { success: false, message: data.message };
-  }
-};
-
-const endIRL = async (irlId) => {
-  const token = getToken();
-
-  // Make a PUT request to the backend
-  const response = await fetch(
-    `${import.31.220.56.85}/users/endIRL/${irlId}`,
-    {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-        "ngrok-skip-browser-warning": `${import.meta.env.VITE_ISDEVELOPMENT}`,
-        Authorization: `Bearer ${token}`,
-      },
-    }
-  );
-
-  const data = await response.json();
-  console.log(data);
-
-  if (response.ok) {
-    return { success: true, message: data.message };
-  } else {
-    return { success: false, message: data.message };
-  }
-};
-
->>>>>>> Stashed changes
 const cancelIRL = async (irlId) => {
   const token = getToken();
 
   // Make a POST request to the backend
   const response = await fetch(
-    `${import.31.220.56.85}/users/cancelIRL/${irlId}`,
+    `http://31.220.56.85/users/cancelIRL/${irlId}`,
     {
       method: "DELETE",
       headers: {
@@ -174,7 +120,7 @@ const getScheduleIRLs = async () => {
 
   // Make a POST request to the backend
   const response = await fetch(
-    `${import.31.220.56.85}/users/${id}/scheduleIRL`,
+    `http://31.220.56.85/users/${id}/scheduleIRL`,
     {
       method: "GET",
       headers: {
@@ -199,7 +145,7 @@ const getScheduleIRL = async (irlId) => {
 
   // Make a POST request to the backend
   const response = await fetch(
-    `${import.31.220.56.85}/users/${id}/scheduleIRL/${irlId}`,
+    `http://31.220.56.85/users/${id}/scheduleIRL/${irlId}`,
     {
       method: "GET",
       headers: {

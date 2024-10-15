@@ -7,7 +7,7 @@ export async function getReferalLink() {
 
   // Make a POST request to the backend
   const response = await fetch(
-    `${import.31.220.56.85}/users/${id}/generate-referral-code`,
+    `http://31.220.56.85/users/${id}/generate-referral-code`,
     {
       method: "GET",
       headers: {

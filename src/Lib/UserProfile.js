@@ -25,7 +25,7 @@ async function getUserProfile() {
 
   // Make a POST request to the backend
   const response = await fetch(
-    `${import.31.220.56.85}/users/${id}/profile`,
+    `http://31.220.56.85/users/${id}/profile`,
     {
       method: "GET",
       headers: {
@@ -50,7 +50,7 @@ async function updateUserPhoneNumber(phoneNumber) {
 
   // Make a POST request to the backend
   const response = await fetch(
-    `${import.31.220.56.85}/users/${id}/phone-number`,
+    `http://31.220.56.85/users/${id}/phone-number`,
     {
       method: "PUT",
       headers: {
@@ -81,7 +81,7 @@ async function updateUserProfile(formData) {
 
   // Make a POST request to the backend
   const response = await fetch(
-    `${import.31.220.56.85}/users/${id}/profile`,
+    `http://31.220.56.85/users/${id}/profile`,
     {
       method: "PUT",
       headers: {
